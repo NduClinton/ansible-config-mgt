@@ -9,4 +9,21 @@
 <Database-Private-IP-Address> ansible_ssh_user='ec2-user' 
 
 [lb]
+<<<<<<< Updated upstream
 <Load-Balancer-Private-IP-Address> ansible_ssh_user='ubuntu'
+=======
+172.31.20.135
+
+[dev:children]
+nfs
+webservers
+db
+lb
+
+[dev:vars]
+ansible_user=ec2-user
+ansible_ssh_private_key_file=/home/ubuntu/Goking.pem
+
+[lb:vars]
+ansible_user=ubuntu
+>>>>>>> Stashed changes
