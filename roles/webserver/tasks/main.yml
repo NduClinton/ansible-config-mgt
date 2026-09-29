@@ -5,9 +5,8 @@
 
 - name: install git
   become: true
-  ansible.builtin.yum:
-    name: "git"
-    state: present
+  ansible.builtin.command:
+    cmd: dnf install -y git
 
 - name: clone a repo
   become: true
